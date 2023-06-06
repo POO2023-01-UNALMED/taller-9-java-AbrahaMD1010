@@ -134,18 +134,18 @@ public class Calculator extends VBox implements EventHandler<ActionEvent>{
 		}
 		
 		if (value.equals("=")) {
-			String v = displayText.getText();
-			String[] s = v.split("[-+*/]");
+			String l = displayText.getText();
+			String[] s = l.split("[-+*/]");
 			double n1 = Double.parseDouble(s[0]);
 			double n2 = Double.parseDouble(s[1]);
 
-			if (v.contains("+")) {
+			if (l.contains("+")) {
 				displayText.setText(String.valueOf(n1+n2)) ;
-			} else if (v.contains("-")) {
+			} else if (l.contains("-")) {
 				displayText.setText(String.valueOf(n1-n2)) ;
-			}else if (v.contains("*")) {
+			}else if (l.contains("*")) {
 				displayText.setText(String.valueOf(n1*n2)) ;
-			}else if (v.contains("/")) {
+			}else if (l.contains("/")) {
 				displayText.setText(String.valueOf(n1/n2)) ;
 			}
 
